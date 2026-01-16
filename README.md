@@ -96,7 +96,6 @@ nebula/
 Thanks to all the people who contribute!
 <a href="https://github.com/jience/nebula-workspace/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=jience/nebula-workspace" />
-  <img src="https://contrib.rocks/image?repo=EditYJ/nebula-workspace" />
 </a>
 
 ### 📄 License

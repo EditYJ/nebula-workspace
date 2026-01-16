@@ -23,12 +23,12 @@
 
 ### 📸 预览
 <div align="center">
-  <img src="docs/login_dark.png" alt="仪表盘预览" width="800" />
+  <img src="docs/login_dark.png" alt="仪表盘预览" width="1280" />
   <p><em>登录页与接入网关</em></p>
   
   <br />
   
-  <img src="docs/home_dark.png" alt="AI 助手预览" width="800" />
+  <img src="docs/home_dark.png" alt="AI 助手预览" width="1280" />
   <p><em>主仪表盘与数据分析</em></p>
 </div>
 
@@ -96,7 +96,6 @@ nebula/
 感谢所有为该项目做出贡献的人！
 <a href="https://github.com/jience/nebula-workspace/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=jience/nebula-workspace" />
-  <img src="https://contrib.rocks/image?repo=EditYJ/nebula-workspace" />
 </a>
 
 ### 📄 开源协议
