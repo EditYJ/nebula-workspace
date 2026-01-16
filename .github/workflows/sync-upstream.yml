@@ -23,16 +23,26 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
           # Add upstream remote if it doesn't exist
-          git remote add upstream https://github.com/jience/nebula-workspace.git || true
+          if ! git remote get-url upstream > /dev/null 2>&1; then
+            git remote add upstream https://github.com/jience/nebula-workspace.git
+          fi
           
           # Fetch upstream changes
           git fetch upstream
           
           # Merge upstream/main into current branch
-          git merge upstream/main --no-edit || {
-            echo "Merge conflict detected. Please resolve manually."
+          if ! git merge upstream/main --no-edit; then
+            echo "::error::Merge conflict detected while syncing with upstream."
+            echo "Conflicted files:"
+            git diff --name-only --diff-filter=U
+            echo ""
+            echo "To resolve:"
+            echo "1. Clone the repository locally"
+            echo "2. Run: git fetch upstream && git merge upstream/main"
+            echo "3. Resolve conflicts manually"
+            echo "4. Commit and push the changes"
             exit 1
-          }
+          fi
           
           # Push changes
           git push origin main
